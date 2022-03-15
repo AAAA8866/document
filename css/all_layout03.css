@@ -1,0 +1,154 @@
+.header {
+    background: #484848;
+    color:#eceff1;
+}
+.headerWrap {
+    width:100%;
+    margin:0 auto;
+    font-size: 60px;
+    text-align: center;
+}
+
+.header h1 {
+    padding: 0 15px;
+    line-height: 80px;
+}
+
+.content {
+    padding:100px 0;
+}
+
+
+.content .container {
+    display: flex;
+    width: 1200px;
+    margin:0 auto;
+}
+
+.content figure {
+    position: relative;
+    flex:1;
+    padding: 0 15px;
+    
+}
+
+/* .content figure:nth-child(2) {
+    flex:2;
+} */
+
+.content figure img {
+    width:100%;
+}
+
+.sec01 figure a {
+    position:absolute;
+    /* top:50%;
+    left:50%; */
+    inset : 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    
+    width:200px;
+    height:30px;
+    text-align: center;
+    line-height: 24px;
+    border:2px solid #fff;;
+    
+    background-color: #444;
+    color:#fff;
+    transition: 0.5s;
+
+}
+
+.sec01 figure a:hover {
+    background:#fff;
+    color: #444;
+}
+
+.sec01 figure:hover a {
+    opacity: 1;
+}
+
+.sec02 {
+    background: #f2f2f2;
+}
+
+.sec02 .inner {
+    position: relative;
+    background: #34515e;
+}
+
+.sec02 .inner a {
+    position:absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    color:#fff;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.sec02 .inner a:hover {
+    opacity: 1;
+}
+
+.sec03 {
+    background-color: #808e95;
+}
+
+.sec03 .inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.sec03 .inner a {
+    position: absolute;
+    top:100%;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    line-height: 46px;
+    transition: 0.5s;
+
+    text-align: center;
+}
+
+.sec03 .inner:hover a{
+    top: calc(100% - 50px);
+}
+
+.service {
+    padding: 50px 0;
+}
+
+.service .inner {
+    width: 250px;
+    margin: 0 auto;
+    background:1;
+}
+
+.service .inner span {
+    display: inline-block;
+    width: 0;
+    white-space:nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    transition: width 1s, height 2s;
+}
+
+.service .inner:hover span {
+    width:160px;
+}
+
+.service .inner:hover i {
+    opacity: 0;
+}
