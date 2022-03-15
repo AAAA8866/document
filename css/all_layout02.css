@@ -1,0 +1,92 @@
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+.mainVisual {
+    position: relative;
+}
+
+.mainVisual figure {
+    height:60vh;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;   
+    background-size:cover;
+}
+
+.mainVisual .itm01 {
+    background-image: url('../img/zara01.png')
+}
+.mainVisual .itm02 {
+    background-image: url('../img/zara02.jpg');
+}
+.mainVisual .itm03 {
+    background-image: url('../img/zara03.jpg');
+}
+
+.mainVisual .slick-dots {
+    position: absolute;
+    left:50%;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    gap: 10px;
+    transform: translateX(-50%);
+}
+
+.mainVisual .slick-dots li {
+    background: #616161;
+    width:100px;
+    height:4px;
+    border-radius: 2px;    
+    cursor: pointer;
+}
+
+.mainVisual .slick-arrow {
+    position:absolute;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+    border: none;
+    border-top: 1px solid #444;
+    border-left: 1px solid #444;
+    background: transparent;
+    text-indent:-999999px;
+    outline: none;
+}
+
+.mainVisual .slick-prev {
+    top: 50%;
+    left:100px;
+    transform:rotate(-45deg);
+}
+
+.mainVisual .slick-next {
+    top: 50%;
+    right: 100px;
+    transform:rotate(135deg);
+}
+
+.mainVisual .slick-dots li.slick-active {
+    background: #1b1b1b;
+}
+
+.mainVisual .slick-dots button {
+    display: none;
+}
+
+.mainVisual .slideArrows i {
+    position:absolute;
+    top: 50%;
+    font-size: 100px;
+    color:rgba(255,255,255,0.5);
+    transform: translateY(-50%);
+}
+
+.mainVisual .slideArrows i:first-child {
+    left:100px;
+    cursor: pointer;
+}
+.mainVisual .slideArrows i:last-child {
+    right:100px;
+    cursor: pointer;
+}
