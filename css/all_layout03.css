@@ -1,18 +1,107 @@
+/* @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'); */
 .header {
-    background: #484848;
+    background : #000a12;
     color:#eceff1;
 }
 .headerWrap {
     width:100%;
     margin:0 auto;
-    font-size: 60px;
-    text-align: center;
+    padding:30px;
+    font-size: 100px;
+    text-align: left;    
 }
 
 .header h1 {
+    font-family: 'Lora', serif;;
+    margin:0 100px;
     padding: 0 15px;
-    line-height: 80px;
+    line-height: 100px;
 }
+
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #444;
+    padding:8px 130px;
+}
+
+.navbar__menu {
+    display:flex;
+    list-style: none;
+    padding-left:0;
+}
+
+.navbar__menu li {
+    padding:8px 12px; 
+}
+
+.navbar__menu li:hover {
+    background-color: #444;
+    border-radius:4px;
+}
+
+.navbar__icon {
+    list-style:none;
+    display:flex;
+    color:white;
+    padding-left:0;
+}
+
+.navbar__icon li {
+    padding:8px 12px;
+}
+
+.navbar__toggleBtn {
+    display:none;
+    position:absolute;
+    right:32px;
+    font-size:24px;
+    color:#444;
+}
+
+
+.mainVisual {
+    position: relative;
+}
+
+.mainVisual figure {
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.mainVisual .item01 {
+    background-image: url('../img/zara01.png');
+}
+.mainVisual .item02 {
+    background-image: url('../img/zara02.jpg');
+}
+.mainVisual .item03 {
+    background-image: url('../img/zara03.jpg');
+}
+
+
+.mainVisual .slideArrows i {
+    position:absolute;
+    top: 50%;
+    font-size: 80px;
+    color: rgba(0,0,0,0.5);
+    transform: translateY(-50%);
+}
+
+.mainVisual .slideArrows i:first-child {
+    left: 40px;
+    cursor: pointer;
+}
+
+.mainVisual .slideArrows i:last-child {
+    right:40px;
+    cursor: pointer;
+}
+
 
 .content {
     padding:100px 0;
@@ -73,6 +162,20 @@
     background: #f2f2f2;
 }
 
+.sec02 h1 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sec02 hr {
+    width: 10%;
+    size: 20px;
+    margin: 20px auto;
+    background-color: #444;
+}
+
 .sec02 .inner {
     position: relative;
     background: #34515e;
@@ -100,6 +203,21 @@
 
 .sec03 {
     background-color: #808e95;
+}
+
+.sec03 h1 {
+    color:#eceff1;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sec03 hr {
+    width: 10%;
+    size: 20px;
+    margin: 20px auto;
+    background-color: #444;
 }
 
 .sec03 .inner {
@@ -134,6 +252,8 @@
     width: 250px;
     margin: 0 auto;
     background:1;
+    font-size: 20px;
+    text-align: center;
 }
 
 .service .inner span {
@@ -146,7 +266,7 @@
 }
 
 .service .inner:hover span {
-    width:160px;
+    width:250px;
 }
 
 .service .inner:hover i {
