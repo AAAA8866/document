@@ -1,0 +1,20 @@
+.popUp01, .popUp02, .popUp03 {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #555;
+}
+
+.popUp button {
+    position: absolute;
+    bottom:30px;
+    right:30px;
+
+    width:100px;
+    height: 40px;
+    border: none;
+    background: #ddd;
+    color: #555;
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+.headerWrap {
+    display: none;
+    background: #444;
+    color:azure;
+    text-align: center;
+    padding: 10px;
+}
+
+.headerWrap .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.xi-close {
+    line-height:20px;
+    width: 1200px;
+    margin:0 1200px;
+
+}
+
+
+
+
+.tabMenu {
+    padding:100px 0;
+    background:#ddd;
+}
+
+.tabMenu .container {
+    width:600px;
+    margin: 0 auto;
+}
+
+.tabMenu .tabLink {
+    display: flex;
+}
+
+.tabMenu .tabLink li {
+    flex:1;
+}
+
+.tabMenu .tabLink li:active {
+    color: #fff;
+}
+
+.tabMenu .tabContents {
+
+}
+
+.tabMenu .tabContents>div {
+    display: none;
+}
+
+.tabMenu .tabContents>div.active {
+    display: block;
+}
+
+.bgfixed {
+    padding:200px 0;
+    text-align: center;
+    color: #444;
+    background: url(../img/zara01.png) no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.bgfixed h2{
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 3em;
+    margin-bottom: 30px;
+}

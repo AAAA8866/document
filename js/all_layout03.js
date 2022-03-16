@@ -29,5 +29,10 @@ $(function() {
         $('.mainSlide').slick('slickNext')
     });
 
+    function 팝업닫기 () {
+        $('.pop001').hide();
+    }
+    $('.pop button').on('click',팝업닫기);
+
     ///////////
 })

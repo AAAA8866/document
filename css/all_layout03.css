@@ -146,7 +146,6 @@
     background-color: #444;
     color:#fff;
     transition: 0.5s;
-
 }
 
 .sec01 figure a:hover {
@@ -271,4 +270,25 @@
 
 .service .inner:hover i {
     opacity: 0;
+}
+
+.pop001 {
+    position: absolute;
+    top: 20%;
+    right:10%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;;
+}
+
+.pop button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    width: 100px;
+    height: 40px;
+    border: none;
+    background: #ddd;
+    counter-reset: #555;
+    cursor: pointer;
 }
