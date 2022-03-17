@@ -9,7 +9,10 @@
         @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
         *{margin: 0; box-sizing: border-box;}
-        body{line-height: 1;}
+        body{line-height: 1.5;}
+        h2 {
+            padding:10px;
+        }
 
         .ba {
             padding: 100px 0; 
@@ -35,11 +38,10 @@
             width: 20px;
             height: 50px;
             border-radius: 20px 0;
-    
+            
             margin:15px auto;
-            background: #444;
+            background: #00e676;
         }
-
         .bas03 h2::before {
             content:"";
             display: inline-block;
@@ -49,6 +51,7 @@
             vertical-align: middle;
             margin: 0 10px;
         }
+
         .bas03 h2::after {
             content:"";
             display: inline-block;
@@ -73,10 +76,10 @@
         } */
 
         .bas04 li::before {
-            content:"\e921";
+            content:"\e92c";
             font-family:xeicon!important;
             display: inline-block;
-            color:#fff;
+            color:#0095a8;
             margin-right: 10px;
             vertical-align: middle;
         }
@@ -109,8 +112,8 @@
 
             width:60px;
             height: 60px;
-            background: #333;
-            color: #fff;
+            background: #e6ceff;
+            color: #4d2c91;
             line-height: 60px;
             border-radius: 50%;
         }
@@ -122,19 +125,20 @@
 <body>
     <div class="ba bas01">
         <h2>LOREM</h2>
-        <p>Lorem ipsum dolor sit.</p>
+        <p>비포 애프터 사용하기</p>
     </div>
     <div class="ba bas02">
         <h2>LOREM</h2>
-        <p>Lorem ipsum dolor sit.</p>
+        <p>border radius 사용해서 나뭇잎 만들기</p>
     </div>
     <div class="ba bas03">
         <h2>LOREM</h2>
-        <p>Lorem ipsum dolor sit.</p>
+        <p>vertical align:middle 활용</br>
+        inline-blcock 사용</p>
     </div>
     <div class="ba bas04">
         <h2>LOREM<i class="xi-close"></i></h2>
-        <p>Lorem ipsum dolor sit.</p>
+        <p>content에 xeicon 사용</p>
         <ul>
             <li>Lorem ipsum dolor sit amet consectetur.</li>
             <li>Lorem ipsum dolor sit amet consectetur.</li>
@@ -151,7 +155,7 @@
     </div>
     <div class="ba bas05">
         <h2>LOREM</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>attr 함수를 통해 data title호출</p>
         <div class="container">
             <figure data-num="01">
                 <img src="../images/lesedilarona01.jpg" alt="">
