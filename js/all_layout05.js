@@ -21,4 +21,6 @@ function tabMenu() {
 
 $('.tabLink li').on('click',tabMenu);
 
+$('.topBannerToggle i').on('click, tableMenu')
+    $('.headerWrap')
 })
