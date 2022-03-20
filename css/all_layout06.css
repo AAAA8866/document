@@ -238,16 +238,261 @@
     display: none;
 }
 
+/* mainVisual 03.17 */
+
+.mainProduct {
+    padding:100px 0;
+    text-align: center;
+}
+
+.mainProduct h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
+
+.mainProduct p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+.mainProduct .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainProduct .container figure {
+    position: relative;
+    flex:1;
+    padding: 0 15px;
+}
 
 
+.mainProduct .container figure .inner {
+    margin-bottom: 15px;
+}
+
+.mainProduct .container figure img {
+    width: 100%;
+}
+
+.mainProduct .container figure strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mainProduct .container figure a {
+    display: block;
+    background: #333;
+    color: #fff;
+}
+
+.mainProduct .container figure a:hover {
+    background: #ddd;
+    color:#333;
+}
+
+.mainProduct .inner {
+    overflow: hidden;
+}
+
+.mainProduct .inner img {
+    transition: 0.5s;
+}
+.mainProduct .inner:hover img {
+    transform: scale(1.5);
+}
+
+.mainProduct .container .label{
+    position: absolute;
+    top: 50;
+    right: 50;
+
+    border-top:10px solid #444;
+    border-left:50px solid #444;
+    border-bottom:10px solid #444;
+    border-right:10px solid transparent;
+}
+
+.mainProduct .container .label span {
+    position: absolute;
+    top: -6px;
+    left: -45px;
+    color: #fff;
+
+    font-size: 14px;
+}
+
+.Banner {
+    padding:100px 0;
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+    filter:grayscale(1);
+    text-align: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.Banner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.20em;
+}
+
+.Banner p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+.Banner i {
+    padding: 7px;
+    background: #333;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.eventProduct {
+    padding:100px 0;
+}
+
+.eventProduct .container {
+    display: flex;
+    width:1200px;
+    margin:0 auto;
+}
+
+.eventProduct .container>div {
+    flex:1;
+    padding:0 15px;
+    text-align: center;
+}
+
+.eventProduct .left {
+    width:40%;
+}
+
+.eventProduct .right {
+    /* display: flex; */
+    align-items: center;
+    width: 60%;
+}
+.eventProduct .eProductSlide {
+    padding:5px;
+    border:5px solid #ddd;
+}
+
+.eventProduct h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.20em;
+}
+
+.eventProduct p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+    line-height: 1.6px;
+}
+
+.eventProduct i {
+    padding:13px;
+    background: #333;
+    color:#fff;
+    border-radius: 7px;
+    margin:15px;
+}
 
 
+.allProduct {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    background: #f2f2f2;
+}
 
 
+.allProduct h2 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 10px;
+}
 
+.allProduct p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
 
+.allProduct .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
+.allProduct .aproductSlide figure{
+    padding: 0 15px;
+}
 
+.allProduct .inner {
+    margin-bottom: 20px;
+}
 
+.allProduct .inner + strong {
+    display: block;
+    margin-bottom: 20px;
 
+    font-size: 13px;
+    font-weight: 300;
+}
 
+.allProduct .slick-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.allProduct .slick-dots li {
+    width: 13px;
+    height: 13px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.allProduct .slick-dots li.slick-active {
+    background: #f00;
+}
+
+.allProduct .slick-dots li button {
+    display: none;
+}
+
+.allProduct i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30%;
+
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+    background: #333;
+}
+
+.allProduct i:first-child {
+    margin-left: -700px;
+}
+
+.allProduct i:last-child {
+    margin-left: 700px;
+}
