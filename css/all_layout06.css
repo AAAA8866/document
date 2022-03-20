@@ -329,7 +329,7 @@
 
 .Banner {
     padding:100px 0;
-    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+    background: url('../images/mainvisual01.jpg') no-repeat center center/cover;
     filter:grayscale(1);
     text-align: center;
     color: #fff;
