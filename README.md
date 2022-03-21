@@ -22,4 +22,8 @@
 4. J query : $this, index
 5. parallex, remove/add Class /slideUp,Down,Toggle
 6. slick active, opacity 0&1 , translate X&Y, transition
-7. YTP PLAYER
+7. YTP PLAYER : https://deeplify.dev/front-end/markup/text-ellipsis
+   말줄임표 : width: 200px;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
