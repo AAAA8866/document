@@ -133,11 +133,64 @@
 }
 
 .mainVisual .visualSlide figure {
+    position: relative;
     height: 600px;
 }
 
-.mainVisual .visualSlide figure.slick-active {
+.mainVisual .visualSlide figure i {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+
+    font-size: 100px;
+    color: #f00;
+
+    opacity: 0;
+    transition: 0.5s;
 }
+
+.mainVisual .visualSlide figure.oo i {
+    opacity: 1;
+    animation: heart 1s infinite;
+}
+
+@keyframes heart {
+    0% {transform: scale(1);}
+    20% {transform: scale(0.5);}
+    50% {transform: scale(1);}
+    70% {transform: scale(0.5);}
+    100% {transform: scale(1);}
+}
+.mainVisual .visualSlide .msLeft {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    z-index: 999;
+
+    border-top: 100px solid #fff;
+    border-left: 100px solid transparent;
+
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.mainVisual .visualSlide .msLeft.oo {
+    border-top: 100px solid #333;
+}
+
+.mainVisual .visualSlide .msRight {
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+
+    transform: translateY(-50%) rotate(135deg) rotateY(45deg);
+}
+
+
 
 .mainVisual .visualSlide figure .inner {
     width: 1200px;
@@ -570,22 +623,47 @@
 }
 
 .customerArea .container>div {
+    position: relative;
     flex:1;
     padding:0 15px;
 }
 
+.customerArea .container>div .btn {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    background:#e2f1f8;
+    padding:15px 38px;
+    border:3px solid #e2f1f8;
+    border-radius: 10px;
+    color: #333;
+    transition: 0.5s;
+}
+
+.customerArea .container>div:hover .btn {
+    background:#62757f;
+    border:3px solid #cfd8dc;
+    color:#fff;
+}
+
+
 .customerArea .tab_menu {
     display: flex;
+    text-align: center;
 }
 .customerArea .tab_menu>li {
     flex:1;
     background: #333;
     color:#fff;
     padding:10px 20PX;
+    cursor: pointer;
 }
 
 .customerArea .tab_menu>li.oo {
     background: #369;
+    
 }
 
 
@@ -604,12 +682,15 @@
 .customerArea .tabContent a {
     display: flex;
     justify-content: space-between;
-    border: 1px dotted #444;
+    padding:10px 0;
+    border: 1px double #ddd;
+    /* border styles : dotted, solid, double, dashed, groove등 */
 }
 
-/* .customerArea .tabContent span {
+.customerArea .tabContent span {
+    display: block;
     margin-left: auto;
-} */
+}
 
 .customerArea .tabContent strong {
     display: block;
@@ -623,3 +704,50 @@
 .customerArea .tabContent span:after {content:" ]"}
 
 .customerArea .container img {width:100%;}
+
+.customerArea i {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    font-size: 80px;
+    color: #fff;
+    transition: 0.5s;
+    animation: search 3s infinite;
+}
+
+@keyframes search {
+    0% {transform: scale(1);}
+    20% {transform: scale(0.5);}
+    50% {transform: scale(1);}
+    70% {transform: scale(0.5);}
+    100% {transform: scale(1);}
+}
+
+
+/* ----main 03.21---- */
+
+.footerWrap {
+    padding:10px 0;
+    background: #333;
+    color:#fff;
+}
+
+.footerWrap .container {
+    display: flex;
+    width:1200px;
+    margin:0 auto;
+    line-height: 60px;
+}
+
+.footerWrap .top {
+    border-bottom: 1px solid #666;
+}
+
+
+.footerWrap dl {
+    display: flex;
+}
+.footerWrap dd {
+    padding : 0 15px;
+}

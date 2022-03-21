@@ -21,6 +21,18 @@ $(function() {
         dots:true
     });
 
+    $('.visualSlide figure').eq(1).addClass('oo');
+    $('.visualSlide').on('afterChange', function (e,s,c){
+    $('.visualSlide figure').eq(c+1).addClass('oo').siblings().removeClass('oo');
+    if (c===1) {
+        $('.msLeft').addClass('oo')
+    } else {
+        $('.msLeft').removeClass('oo')
+    }
+    });
+
+
+
     $('.eProductSlide').slick({
         arrows:false,
         autoplay:true,
@@ -79,10 +91,19 @@ $(function() {
 
     $('.tab_menu li').on('click',function(){
         var idx = $(this).index();
-
         $(this).addClass('oo').siblings().removeClass('oo');
         $('.tabContent>div').eq(idx).addClass('oo').siblings().removeClass('oo');     
     });
+
+    // tab_menu 안 list 안 a로 잡혀있을때
+    // $('.tab_menu li a').on('click',function(){
+    //     var idx = $(this).parent().index();
+    //     $(this).addClass('oo').siblings().removeClass('oo');
+    //     $('.tabContent>div').eq(idx).addClass('oo').siblings().removeClass('oo');     
+    // });
+
+
+    
 
     
 
