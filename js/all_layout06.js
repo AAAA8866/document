@@ -1,14 +1,9 @@
 $(function() {
     ///////
 
-    // $('.xi-close').on('click',function(){
-    //     $('.topBanner').slideToggle(800, 'swing');
-    
-
-
     function topBannerHandler() {
         // $('.topBanner').slideToggle(800,'swing');
-        $('.topBanner').hide();
+        $('.topBanner').slideUp();
     }
     $('.topBanner .container i').on('click',topBannerHandler) 
 
@@ -18,7 +13,9 @@ $(function() {
         autoplay:true,
         autoplaySpeed:2000,
         // Speed:300,
-        dots:true
+        dots:true,
+        prevArrow: '    <div class="msLeft"></div>      ',
+        nextArrow: '    <div class="msRight"></div>      '
     });
 
     $('.visualSlide figure').eq(1).addClass('oo');
@@ -49,6 +46,8 @@ $(function() {
 
     $('.aproductSlide').slick({
         arrows: false,
+        // autoplay:true,
+        // autoplaySpeed:3000,
         dots: true,
         slidesToShow: 5,
         centerMode: true,
@@ -78,6 +77,8 @@ $(function() {
          opacity:1,
          showControls:false,
     });
+
+
 
     $('.movieBg i:first-child').on('click', function(){
         $('#bgndVideo').YTPPause();
