@@ -713,16 +713,22 @@
     font-size: 80px;
     color: #fff;
     transition: 0.5s;
-    animation: search 3s infinite;
+    animation: search 2.5s infinite;
 }
 
-@keyframes search {
+/* @keyframes search {
     0% {transform: scale(1);}
     20% {transform: scale(0.5);}
     50% {transform: scale(1);}
     70% {transform: scale(0.5);}
     100% {transform: scale(1);}
+} */
+@keyframes search {
+    0% {top:0px;}
+    50% {right:200px; top:70px}
+    100% {top:0px;}
 }
+
 
 
 /* ----main 03.21---- */
@@ -738,6 +744,7 @@
     width:1200px;
     margin:0 auto;
     line-height: 60px;
+    justify-content: space-between;
 }
 
 .footerWrap .top {
