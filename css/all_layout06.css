@@ -368,7 +368,7 @@
 }
 
 .eventProduct .container>div {
-    flex:1;
+
     padding:0 15px;
     text-align: center;
 }
@@ -376,16 +376,16 @@
 .eventProduct .left {
     width:40%;
 }
-
-.eventProduct .right {
-    /* display: flex; */
-    align-items: center;
-    width: 60%;
-}
 .eventProduct .eProductSlide {
     padding:5px;
     border:5px solid #ddd;
 }
+.eventProduct .right {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
 
 .eventProduct h2 {
     font-size: 21px;
@@ -439,37 +439,47 @@
     padding: 0 15px;
 }
 
+.allProduct .aproductSlide {
+    width: 1200px;
+    margin:0 auto;
+}
+
 .allProduct .aproductSlide figure{
     padding: 0 15px;
 }
 
 .allProduct .inner {
     margin-bottom: 20px;
+    width:100%;
 }
 
-.allProduct .inner + strong {
+/* .allProduct .inner + strong {
     display: block;
     margin-bottom: 20px;
 
     font-size: 13px;
     font-weight: 300;
-}
+} */
 
 .allProduct .slick-dots {
+    text-align: center;
+    margin-top: 30px;
     display: flex;
     gap: 10px;
     justify-content: center;
 }
 
 .allProduct .slick-dots li {
+    display: inline-block;
+    margin:0 2px;
     width: 13px;
     height: 13px;
-    background: #333;
+    background: #fff;
     border-radius: 50%;
 }
 
 .allProduct .slick-dots li.slick-active {
-    background: #f00;
+    background: #333;
 }
 
 .allProduct .slick-dots li button {
@@ -496,3 +506,120 @@
 .allProduct i:last-child {
     margin-left: 700px;
 }
+/* 03.21  */
+.allProduct {padding:100px 0;text-align:center;position:relative;}
+.allProduct h2 {font-size:20px;font-weight:100;margin-bottom:10px;letter-spacing:0.5em;}
+.allProduct p {font-size:14px;font-weight:300;margin-bottom:30px;letter-spacing:-0.025em;}
+
+.allProduct .aproductSlide {width:1200px;margin:0 auto;}
+
+.allProduct .aproductSlide figure {padding:0 15px;}
+.allProduct .aproductSlide img {width:100%;}
+
+.aproductSlide .slick-dots {text-align:center;margin-top:30px;}
+.aproductSlide .slick-dots li {display:inline-block;width:10px;height:10px;background:#f00;margin:0 2px;border-radius:50%;}
+.aproductSlide .slick-dots li.slick-active {background:#333;}
+.aproductSlide .slick-dots li button {display:none;}
+
+#allProduct i {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:40px;color:#fff;background:#333;padding:10px;border-radius:50%;}
+#allProduct i.xi-arrow-left {margin-left:-700px;}
+#allProduct i.xi-arrow-right {margin-left:700px;}
+/* 03.21  */
+
+
+
+.movieBg {
+    padding:200px 0;
+    background: #000;
+    filter:grayscale(1);
+
+    color:#FFF;
+    text-align: center;
+}
+
+.movieBg h3 {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 0.20em;
+    margin-bottom: 15px;
+}
+
+.movieBg p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+.movieBg i {
+    font-size: 20px;
+    padding:10px;
+    background: #333;
+    border-radius: 10px;
+}
+
+.customerArea {
+    padding:100px 0;
+    background: #f3f3f3;
+}
+
+.customerArea .container {
+    display:flex;
+    width:1200px;
+    margin:0 auto;
+}
+
+.customerArea .container>div {
+    flex:1;
+    padding:0 15px;
+}
+
+.customerArea .tab_menu {
+    display: flex;
+}
+.customerArea .tab_menu>li {
+    flex:1;
+    background: #333;
+    color:#fff;
+    padding:10px 20PX;
+}
+
+.customerArea .tab_menu>li.oo {
+    background: #369;
+}
+
+
+.customerArea .tab_menu>li~li {
+    border-left: 1px solid #fff;
+}
+
+.customerArea .tabContent>div {
+    display: none;    
+}
+
+.customerArea .tabContent>div.oo {
+    display: block;
+}
+
+.customerArea .tabContent a {
+    display: flex;
+    justify-content: space-between;
+    border: 1px dotted #444;
+}
+
+/* .customerArea .tabContent span {
+    margin-left: auto;
+} */
+
+.customerArea .tabContent strong {
+    display: block;
+    width:400px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.customerArea .tabContent span:before {content:"[ "}
+.customerArea .tabContent span:after {content:" ]"}
+
+.customerArea .container img {width:100%;}

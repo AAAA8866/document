@@ -50,6 +50,41 @@ $(function() {
         $('.aproductSlide').slick('slickNext')
     });
 
+    // let iidx = $('.aproductSlide figure.slick-current');
+    // iidx.addClass('on')
+    // $('.aproductSlide').on('afterChange', function() {
+    //     let iidx = $(.aproductSlide figure.slick-current');
+    //     iidx.addClaa('on').siblings().removeClass('on')
+    // });
+
+    $("#bgndVideo").YTPlayer({
+        videoURL:'https://www.youtube.com/watch?v=qR13PjAwHwY',
+        containment:'.movieBg',
+        autoPlay:true,
+         mute:true, 
+         startAt:0, 
+         opacity:1,
+         showControls:false,
+    });
+
+    $('.movieBg i:first-child').on('click', function(){
+        $('#bgndVideo').YTPPause();
+    });
+    
+    $('.movieBg i:last-child').on('click', function(){
+        $('#bgndVideo').YTPPlay();
+    });
+
+
+
+    $('.tab_menu li').on('click',function(){
+        var idx = $(this).index();
+
+        $(this).addClass('oo').siblings().removeClass('oo');
+        $('.tabContent>div').eq(idx).addClass('oo').siblings().removeClass('oo');     
+    });
+
+    
 
     ////////
 })
