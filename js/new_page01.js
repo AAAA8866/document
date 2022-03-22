@@ -69,7 +69,7 @@ $(function() {
     // });
 
     $("#bgndVideo").YTPlayer({
-        videoURL:'https://www.youtube.com/watch?v=qR13PjAwHwY',
+        videoURL:'https://www.youtube.com/watch?v=r-uWqlTe-SE',
         containment:'.movieBg',
         autoPlay:true,
          mute:true, 
@@ -115,6 +115,20 @@ $(function() {
     $('.popup01 button').on('click', function() {
         $(this).parent().hide();
     })
+
+
+    $('.leftBanner .itm05').on('click',function(){
+        $('html, body').animate({scrollTop: '0'}, 450);
+    })
+
+    $(window).on('scroll', function(){
+        var scr=$(window).scrollTop();
+        $('.leftBanner').css({top:350+scr});
+    })
+    // $('.Wrap').Wrap({
+    //     navigation: true,
+        
+    // });
 
     ////////
 })
