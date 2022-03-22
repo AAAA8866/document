@@ -5,8 +5,8 @@
 
 /* topBanner */
 .topBanner {
-    background: #f2f2f2;
-    padding: 24px 0;
+    background: #fC0;
+    padding: 10px 0;
 }
 
 .topBanner .container {
@@ -54,6 +54,10 @@
 
 /* header */
 
+.headerWrap {
+    background: #000
+}
+
 .headerWrap .container {
     display: flex;
     width: 1200px;
@@ -63,6 +67,7 @@
 
 .headerWrap .container>* {
     padding:0 15px;
+    color:#fff;
 }
 
 .gnb>ul {
@@ -82,7 +87,7 @@
     display: block;
     width: 1px;
     height: 13px;
-    background: #333;
+    background: #fff;
     transform: translate(-50%,-50%);
 }
 
@@ -93,18 +98,18 @@
 
 .searchForm {
     margin-left: auto;
-    background:#fff;
+    background:transparent
 }
 
 .searchForm input[type="search"] {
     padding: 3px 0;
     outline: none;
     border: none;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #fff;
 }
 
 .searchForm input[type="search"]::placeholder {
-    color:#ddd;
+    color:#444;
     font-size: 15px;
 }
 .searchForm input[type="search"]:focus::placeholder {
@@ -134,7 +139,7 @@
 
 .mainVisual .visualSlide figure {
     position: relative;
-    height: 600px;
+    height: 800px;
 }
 
 .mainVisual .visualSlide figure i {
@@ -143,7 +148,7 @@
     right: 200px;
 
     font-size: 100px;
-    color: #f00;
+    color: #ddd;
 
     opacity: 0;
     transition: 0.5s;
@@ -219,6 +224,7 @@
     transform: translatex(-100px);
     font-size: 15px;
     font-weight: 300;
+    line-height: 30px;
     transition: 1s 0.5s; 
 }
 
@@ -229,9 +235,14 @@
 
 .mainVisual .visualSlide figure .inner a {
     opacity: 0;
+
+    border-radius: 5px;
+    background: #ddd;
+    color:#444;
     transform: translatey(-100px);
-    font-size: 15px;
-    font-weight: 300;
+
+    font-size: 13px;
+    font-weight: 500;
     transition: 1s 1.5s; 
 }
 
@@ -241,42 +252,48 @@
 }
 
 .mainVisual .visualSlide .itm01 {
-    background: url('../images/mainvisual01.jpg') no-repeat center center/cover;
+    background: url('../N_img/slide001.jpg') no-repeat center center/cover;
 }
 .mainVisual .visualSlide .itm02 {
-    background: url('../images/mainvisual02.jpg') no-repeat center center/cover;
+    background: url('../N_img/slide002.jpg') no-repeat center center/cover;
 }
 .mainVisual .visualSlide .itm03 {
-    background: url('../images/mainvisual03.jpg') no-repeat center center/cover;
+    background: url('../N_img/slide003.jpg') no-repeat center center/cover;
+}
+.mainVisual .visualSlide .itm04 {
+    background: url('../N_img/slide004.jpg') no-repeat center center/cover;
 }
 
 .mainVisual .visualSlide .slick-dots {
     display: flex;
-    gap:10px;
+    gap:20px;
 
     position: absolute;
     bottom:60px;
     left:50%;
     transform: translateX(-50%);
+    cursor: pointer;
 
 }
 
 
 .mainVisual .visualSlide .slick-dots li {
-    width: 100px;
-    height: 5px;
-    background:#333;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background:#ddd;
     transition: 2s;
 }
 
-.mainVisual .visualSlide .slick-dots li::after {
+/* .mainVisual .visualSlide .slick-dots li::after {
     content: "";
     display: block;
     width:0;
     height: 100%;
-    background: #f00;
+    border-radius: 50%;
+    background: #fc0;
     transition: 0.5s;
-}
+} */
 
 .mainVisual .visualSlide .slick-dots li.slick-active::after {
     width:100%;
@@ -284,7 +301,7 @@
 }
 
 .mainVisual .visualSlide .slick-dots li.slick-active {
-    background: #fff;
+    background: #fc0;
 }
 
 .mainVisual .visualSlide .slick-dots button {
@@ -299,8 +316,9 @@
 }
 
 .mainProduct h2 {
-    font-size: 19px;
-    font-weight: 100;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: underline;
     letter-spacing: 0.20em;
     margin-bottom: 10px;
 }
@@ -325,28 +343,36 @@
 }
 
 
-.mainProduct .container figure .inner {
+/* .mainProduct .container figure .inner {
     margin-bottom: 15px;
-}
+    border: none;
+} */
 
 .mainProduct .container figure img {
     width: 100%;
 }
 
-.mainProduct .container figure strong {
-    display: block;
-    margin-bottom: 10px;
+.mainProduct .container figure i {
+    color:#fc0;
 }
-
 .mainProduct .container figure a {
     display: block;
+    width: 100%;
+    height:20px;
+    margin: 0 auto;
+    
+    text-align: right;
     background: #333;
     color: #fff;
 }
 
 .mainProduct .container figure a:hover {
-    background: #ddd;
+    background: #FC0;
     color:#333;
+}
+
+.mainProduct .container figure a:hover i {
+    color:#fff;
 }
 
 .mainProduct .inner {
@@ -381,9 +407,9 @@
 }
 
 .Banner {
-    padding:100px 0;
-    background: url('../images/mainvisual01.jpg') no-repeat center center/cover;
-    filter:grayscale(1);
+    padding:200px 0;
+    background: url('../N_img/banner03.jpg') no-repeat center center/cover;
+    filter:grayscale(0.5);
     text-align: center;
     color: #fff;
     background-attachment: fixed;
@@ -427,22 +453,25 @@
 }
 
 .eventProduct .left {
-    width:40%;
+    width:50%;
+}
+.eventProduct .left img{
+    width: 100%;
 }
 .eventProduct .eProductSlide {
     padding:5px;
     border:5px solid #ddd;
 }
 .eventProduct .right {
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    width: 60%;
+    width: 1200px;
 }
 
-
 .eventProduct h2 {
-    font-size: 21px;
+    font-size: 30px;
     font-weight: 700;
+    text-decoration: underline;
     margin-bottom: 10px;
     letter-spacing: 0.20em;
 }
@@ -474,8 +503,8 @@
 
 
 .allProduct h2 {
-    font-size: 19px;
-    font-weight: 100;
+    font-size: 30px;
+    font-weight: 700;
     letter-spacing: 0.20em;
     margin-bottom: 10px;
 }
@@ -510,6 +539,7 @@
     transition: 0.5s;
 }
 .allProduct .inner:hover img {
+    filter:grayscale(1);
     transform: scale(1.5);
 }
 
@@ -527,8 +557,10 @@
     display: block;
     margin-bottom: 20px;
 
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 700;
+    background: #ddd;
+    cursor: pointer;
 }
 
 /* 03.21 수정 */
@@ -589,17 +621,10 @@
 }
 
 .movieBg h3 {
-    font-size: 19px;
-    font-weight: 100;
+    font-size: 60px;
+    font-weight: 700;
     letter-spacing: 0.20em;
     margin-bottom: 15px;
-}
-
-.movieBg p {
-    font-size: 15px;
-    font-weight: 300;
-    letter-spacing: -0.025em;
-    margin-bottom: 30px;
 }
 
 .movieBg i {
@@ -628,8 +653,8 @@
 
 .customerArea .container>div .btn {
     position: absolute;
-    top:50%;
-    left:50%;
+    top:70%;
+    left:20%;
     transform: translate(-50%,-50%);
 
     background:#e2f1f8;
@@ -729,40 +754,6 @@
     100% {top:0px;}
 }
 
-#movie02 {
-    padding:50px 0;
-    background: #ddd;
-}
-
-#movie02 .container {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-}
-
-#movie02 .container>* {
-    flex:1;
-    padding: 0 15px;
-}
-
-#movie02 iframe {
-    width:100%;
-}
-
-#movie02 .txt {
-    line-height: 30px;
-    vertical-align: middle;
-    text-align: center;
-}
-#movie02 i {
-    font-size: 30px;
-    color: #fff;
-    background: #444;
-    padding: 10px;
-    border-radius: 30%;
-    margin-top: 30px;
-    margin-right: 30px;
-}
 
 
 
@@ -845,71 +836,125 @@
         top:50%;
         left:0;
         transform: translateY(-50%);
-    }
-    
-    .footerWrap .container>* {
-        padding : 0 15px;    
-    }
-    .footerWrap .container>div {
-        padding : 0 15px;
-        font-size: 20px;
+}
+
+.footerWrap .container>* {
+    padding : 0 15px;    
+}
+.footerWrap .container>div {
+    padding : 0 15px;
+    font-size: 20px;
+}
+
+.bottom {
+    padding-bottom:30px;
+}
+
+.bottom address {
+    font-style: normal;
+}
+.bottom select {
+    background:#333;
+    font-size:15px;
+    padding:4px 10px;
+    outline: none;
+    border:none;
+    border:3px solid #666;
+}
+
+.bottom #link {
+    margin-left: auto;
+}
+
+.popup01 {
+    position: absolute;
+    padding:5px;
+    inset : 37% auto auto 15%;
+    transform: translate(-50%, -50%);
+    border: 3px double #ddd;
+    background: rgba(0,0,0,0.5);
+    border-radius: 30px;
+}
+
+.popup01 img {
+    width:200px;
+    border-radius: 30px;
+}
+
+.poSpup01 button {
+    position: absolute;
+    inset:auto 5% 5% auto; 
+
+    width: 60px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #444;
+    background: #1c313a;
+    color:#fff;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-size: 13px;
+    line-height: 10px;
+    text-align: center;
+;
     }
 
-    .bottom {
-        padding-bottom:30px;
-    }
-    
-    .bottom address {
-        font-style: normal;
-    }
-    .bottom select {
-        background:#333;
-        font-size:15px;
-        padding:4px 10px;
-        outline: none;
-        border:none;
-        border:3px solid #666;
-    }
-    
-    .bottom #link {
-        margin-left: auto;
-    }
-    
-    .popup01 {
-        position: absolute;
-        padding:5px;
-        inset : 37% auto auto 15%;
-        transform: translate(-50%, -50%);
-        border: 3px double #ddd;
-        background: rgba(0,0,0,0.5);
-        border-radius: 30px;
-    }
+.leftBanner {
+    position: absolute;
+    bottom: 200px;
+    right: 40px;
+    text-align: center;
+    transform: 0.5s;
+}
 
-    .popup01 img {
-        width:200px;
-        border-radius: 30px;
-    }
+.leftBanner a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.5);
+    color:#f2f2f2;
+    margin-bottom: 5px;
+}
 
-    .popup01 button {
-        position: absolute;
-        inset:auto 5% 5% auto; 
+.leftBanner a:hover {
+    background: #fc0;
+}
 
-        width: 60px;
-        height: 30px;
-        outline: none;
-        border: 1px solid #444;
-        background: #1c313a;
-        color:#fff;
-        text-transform: uppercase;
-        border-radius: 15px;
-        font-size: 13px;
-        line-height: 10px;
-        text-align: center;
-    ;
-        }
-    
-    
-    
-    
-    
-    /* ----footerWrap 03.22---- */
+.leftBanner a i {
+    line-height: 50px;
+    font-size: 15px;
+    color: #ddd;
+}
+.leftBanner a:hover i {
+    color: #444;
+}
+
+.leftBanner span {
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;.css({top:300+sct});
+    height: 50px;
+
+    border-radius: 5px;
+    background: #fc0;
+    line-height: 50px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.leftBanner a:hover span {
+    opacity: 1;
+    left: -100px;
+    width: 100px;
+    transition: 0.5s;
+}
+
+
+
+
+
+/* ----footerWrap 03.22---- */
