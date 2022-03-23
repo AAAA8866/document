@@ -116,6 +116,22 @@ $(function() {
         $(this).parent().hide();
     })
 
+    $('.toTop').on('click',function(){
+        $('html, body').animate({
+            scrollTop:0
+        },500);
+        return false;
+    });
+
+    $(window).on('scroll', function(){
+        let sct = $(window).scrollTop();
+        if (sct > 500){
+            $('.toTop').fadeIn(1000);
+        }else {
+            $('.toTop').fadeOut(1000);
+        }
+    })
+
     ////////
 })
 

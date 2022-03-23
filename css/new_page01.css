@@ -936,7 +936,7 @@
     position: absolute;
     top:0;
     left:0;
-    width: 0;.css({top:300+sct});
+    width: 0;
     height: 50px;
 
     border-radius: 5px;

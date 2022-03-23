@@ -7,6 +7,6 @@ ul,ol {list-style:none;}
 a {text-decoration:none;}
 body {font-family: 'Noto Sans KR', sans-serif;line-height:1;}
 img {vertical-align: middle; max-width:100%;} 
-button {font-family: 'Noto Sans KR', sans-serif;}
+button {font-family: 'Noto Sans KR', sans-serif;, cursor: pointer;}
 
 /* max-width 100%로 줘야지 변경됨 */

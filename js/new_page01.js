@@ -122,9 +122,27 @@ $(function() {
     })
 
     $(window).on('scroll', function(){
-        var scr=$(window).scrollTop();
+        var scr=$(window).stop().scrollTop();
         $('.leftBanner').css({top:350+scr});
     })
+
+    // $('.toTop').on('click',function(){
+    //     $('html, body').animate({
+    //         scrollTop:0
+    //     },500);
+    //     return false;
+    // });
+
+    // // $(window).on('scroll', function(){
+    // //     let sct = $(window).scrollTop();
+    // //     if (sct > 500){
+    // //         $('.toTop').fadeIn(1000);
+    // //     }else {
+    // //         $('.toTop').fadeOut(1000);
+    // //     }
+    // // })
+
+
     // $('.Wrap').Wrap({
     //     navigation: true,
         
