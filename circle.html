@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .bo {
+            transform: perspective(800px) rotateX(45deg);
+            /* transform: rotateX(-30deg) rotateY(50deg); */
+            /* transform: perspective(9cm) rotateX(-15deg) rotateY(30deg); */
+            /* transform: perspective(4cm) rotateX(-15deg) rotateY(30deg); */
+            /* transform: rotateX(90deg) translate3d(0, 0, 50px); */
+        }
+
+        figure {
+            width: 30px;
+            height: 100px;
+            background: #ddd;
+            position: absolute;
+            left: 240px;
+            top: 15px;
+            border-radius: 30px;
+
+            text-align: center;
+            font-weight: 700;
+        }
+
+        figure:nth-of-type(2) {
+            top: 100px;
+            z-index: -1;
+        }
+
+        .circle {
+            position: relative;
+            width: 500px;
+            height: 200px;
+
+            animation: cir 5s infinite linear;
+        }
+
+        .circle span {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        @keyframes cir {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bo">
+        <div class="circle"></div>
+    </div>
+    <figure>+</figure>
+    <figure>-</figure>
+
+</body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+
+        const circleText = (txt, h) => {
+            const TXT = [...txt];
+            const DEG = 360 / TXT.length;
+            TXT.forEach((ele, idx) => {
+                $(`<span>${ele}</span>`).css({
+                    position: `absolute`,
+                    top: 50,
+                    left: `50%`,
+                    height: h,
+                    transform: `rotate(${DEG*idx}deg)`,
+                    transformOrigin: `0 100%`,
+                }).appendTo($(`.circle`))
+                //.prependTo        
+                // .appendTo()는 선택한 요소를 다른 요소 안에 넣습니다.         
+            });
+        }
+
+        circleText('WEARETHEWORLD', 100)
+
+
+
+
+
+    })
+</script>
+
+</html>
