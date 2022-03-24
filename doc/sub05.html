@@ -6,11 +6,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>기본으로돌아가기4</title>
 <link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 <style>
     .Wrap {}
     header, footer {height: 100px; background: #555; color:#fff; text-align: center; line-height: 100px;}
     /* article {min-height: 500px; letter-spacing: -0,025em;}
     img {width:100%} */
+    
+    /* top_banner */
+
+    #top_banner {
+        color:#333;
+        position: relative;
+    }
+    #top_banner .case {
+        background: #f2f2f2;
+    }
+    #top_banner .container {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px 15px;
+    }
+    #top_banner .btn{
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: right;
+        width: 1200px;
+        padding: 0 15px;
+        z-index: 999;
+        cursor: pointer;
+    }
+    #top_banner .btn i {
+        padding: 5px;
+        background: #f2f2f2;
+        transition: 0.2s;
+    }
+    #top_banner .btn i.on {
+        transform: rotate(180deg);
+    }
+
+    /* top_banner */
+
+     header img {
+        height: 100px;
+        width:200px;
+    }
+
 
     .subPage {
         padding:100px 0;
@@ -78,35 +121,49 @@
     }
 
     .subPage .hospitalContent figure:nth-child(1) {
-        background: url(../images/cjon01.jpg) no-repeat 10% center/cover;
+        background: url(../img/zara_wm01.jpg) no-repeat 10% center/cover;
     }
     .subPage .hospitalContent figure:nth-child(2) {
-        background: url(../images/cjon02.jpg) no-repeat left center/cover;
+        background: url(../img/zara_kd02.jpg) no-repeat left center/cover;
     }
     .subPage .hospitalContent figure:nth-child(3) {
-        background: url(../images/cjon01.jpg) no-repeat 70% center/cover;
+        background: url(../img/zara_kd03.jpg) no-repeat 70% center/cover;
     }
     .subPage .hospitalContent figure:nth-child(4) {
-        background: url(../images/cjon02.jpg) no-repeat 20% center/cover;
+        background: url(../img/zara_wm02.jpg) no-repeat 20% center/cover;
     }
     
     .subPage .hospitalContent figure .inner {
         position: absolute;
-        top: 0;
-        left: -100%;
+        top: -100%;
+        /* left: -100%; */
         display: flex;
         flex-direction: column;
 
         width: 100%;
-        height: 100%;
+        height: 60%;
         padding: 30px 20px;
         background: rgba(0,0,0,0.5);
         color:#fff;
         transition: 0.5s;
     }
 
+    .subPage .hospitalContent figure .innerA {
+        height: 60%
+    }
+    .subPage .hospitalContent figure .innerB {
+        height: 70%
+    }
+    .subPage .hospitalContent figure .innerC {
+        height: 80%
+    }
+    .subPage .hospitalContent figure .innerD {
+        height: 90%
+    }
+
     .subPage .hospitalContent figure.on .inner {
-        left:0;
+        top: 0;
+        /* left:0; */
     }
     
     .subPage .hospitalContent figure .inner h3 {
@@ -159,8 +216,9 @@
         margin:0 0 10px 0;
     }
     .subPage .hospitalContent .left p{
-        font-size: 15px;
+        font-size: 16px;
         font-weight:300;
+        line-height: 1.4em;
     }
 
     .dotList {
@@ -186,61 +244,113 @@
 </head>
 <body>
 <div class="Wrap">
+    <div id="top_banner">
+        <div class="case">
+            <div class="container">
+                <h2>저희는 ZARA의 사업 활동이 점점 더 지속 가능할 수 있도록 계속해서 노력하고 있습니다.</h2>
+                <p>2001년에 처음으로 UN 글로벌 협약에 서명하고 첫 번째 행동 강령을 시행한 이후로 ZARA의 사회적 그리고 환경적 목표는 더욱 엄격해졌습니다.</p> 
+            </div>
+        </div>
+        <div class="btn">
+            <i class="xi-arrow-top"></i>
+        </div>        
+    </div>
+
     <header>
-        header
+        <img src="../img/zara01.png" alt="">
     </header>
+
 
     <article class="subPage">
         <section class="hospitalContent">
-            <h2><span>CEO's</span> Information</h2>
+            <h2><span>ZARA</span> PROJECT</h2>
             <p>Welcome to our website!</p>
 
             <div class="container">
                 <div class="top">
                     <figure>
-                        <div class="inner">
-                            <h3>CJ OliveNetworks</h3>
-                            <p>CJ OliveNetworks is a specialized ICT<br>
-                                specialized ICT</p>
+                        <div class="inner innerA">
+                            <h3>ZARA Project</h3>
+                            <p>Over 20 years ago,<br>
+                                we started asking ourselves.</p>
                             </div>
                             <a href="#!">MORE</a>
                     </figure>
                     <figure>
-                        <div class="inner">
-                            <h3>CJ OliveNetworks</h3>
-                            <p>CJ OliveNetworks is a specialized ICT<br>
-                                specialized ICT</p>
+                        <div class="inner innerB">
+                            <h3>ZARA Project</h3>
+                            <p>Over 20 years ago,<br>
+                                we started asking ourselves.</p>
                             </div>
                             <a href="#!">MORE</a>
                     </figure>
                     <figure>
-                        <div class="inner">
-                            <h3>CJ OliveNetworks</h3>
-                            <p>CJ OliveNetworks is a specialized ICT<br>
-                                specialized ICT</p>
+                        <div class="inner innerC">
+                            <h3>ZARA Project</h3>
+                            <p>Over 20 years ago,<br>
+                                we started asking ourselves.</p>
                             </div>
                             <a href="#!">MORE</a>
                     </figure>
                     <figure>
-                        <div class="inner">
-                            <h3>CJ OliveNetworks</h3>
-                            <p>CJ OliveNetworks is a specialized ICT<br>
-                                specialized ICT</p>
+                        <div class="inner innerD">
+                            <h3>ZARA Project</h3>
+                            <p>Over 20 years ago,<br>
+                                we started asking ourselves.</p>
                             </div>
                             <a href="#!">MORE</a>
                     </figure>
                 </div>
                 <div class="left">
-                    <h3>CJ OliveNetworks</h3>
-                    <p>CJ OliveNetworks is a specialized ICT</p>
+                    <h3>ZARA Project</h3>
+                    <p>Over 20 years ago,<br>
+                        we started asking ourselves.</p>
                 </div>
                 <ul class="right dotList">
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <div id="accordion">
+                        <li>
+                            <h3>2022년</h3>
+                            <div>
+                                <ol>
+                                <li>JOIN LIFE 컬렉션 50%</li>
+                                <li>사업장 내 100% 재생 가능한 전기 에너지 사용</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>2023년</h3>
+                            <div>
+                                <ol>
+                                <li>지속 가능한 셀룰로스 섬유 100%</li>
+                                <li>지속 가능한 면 100%</li>
+                                <li>GREEN TO PACK 100%s</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>2025년</h3>
+                            <div>
+                                <ol>
+                                <li>공급망에서 물이 환경에 미치는 영향 25% 감소</li>
+                                <li>ELLEN MACARTHUR 재단의 새로운 플라스틱 경제 글로벌 약속</li>
+                                <li>지속 가능한 리넨 100%</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>2040년</h3>
+                            <div>
+                            <ol>
+                                <li>재활용 폴리에스터 100%</li>
+                                <li>순 배출 0%</li>
+                            </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>2050년</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </li>
+                    </div>    
                 </ul>
                 
                 
@@ -254,12 +364,23 @@
 </body>
 
 <script src="../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+
 <script>
     $(function(){
         $('.subPage .hospitalContent a').on('click',function(){
             $(this).parent().toggleClass('on')
         })
 
+
+        $('#top_banner i').on('click', function(){
+            $('#top_banner .case').slideToggle(200);
+            $(this).toggleClass('on');
+        });
+
+        $("#accordion").accordion();
     })
+
 </script>
 </html>
