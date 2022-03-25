@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기본으로돌아가기6</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/jquery.mb.YTPlayer.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+    .Wrap {}
+    header, footer {height: 100px; background: #555; color:#fff; text-align: center; line-height: 100px;}
+    /* article {min-height: 500px; letter-spacing: -0,025em;}
+    img {width:100%} */
+    
+    /* top_banner */
+
+    #top_banner {
+        color:#333;
+        position: relative;
+    }
+    #top_banner .case {
+        background: #f2f2f2;
+    }
+    #top_banner .container {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px 15px;
+    }
+    #top_banner .btn{
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: right;
+        width: 1200px;
+        padding: 0 15px;
+        z-index: 999;
+        cursor: pointer;
+    }
+    #top_banner .btn i {
+        padding: 5px;
+        background: #f2f2f2;
+        transition: 0.2s;
+    }
+    #top_banner .btn i.on {
+        transform: rotate(180deg);
+    }
+
+/*------ top_banner ----- */
+    header {
+        display: none;
+    }
+
+    #subPage .info_content {
+        padding:100px 0;
+        letter-spacing: -0.025em;
+    }
+
+    #subPage .info_content h2 {
+        font-family: 'Lora', serif;
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #subPage .info_content h2::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 2px;
+        background: #333;
+        margin: 10px auto;
+    }
+
+    #subPage .info_content>p {
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+        margin: 0 0 50px 0;
+    }    
+
+    #subPage .info_content .fixed_bg {
+        background: url(../img/zara_pr1.jpg) no-repeat fixed center center/cover;
+        /* background: #000; */
+        color:#f2f2f2;
+        text-align: center;
+        padding: 200px 0;
+        margin: 0 0 50px 0;
+    }
+
+    #subPage .info_content .fixed_bg strong{
+        display: block;
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 30px;
+        font-weight: 900;
+        margin:0 0 20px 0;
+    }
+
+    #subPage .info_content .fixed_bg p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    /*------ info ----- */
+
+    #subPage .info_content .container {
+        display: flex;
+        width: 1200px;
+        margin: 0 auto 100px auto;    
+    }
+
+    #subPage .info_content .container figure {
+        padding: 0 15px;
+    }
+
+    #subPage .info_content .container .inner {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 20px 30px;
+        border-bottom: 5px solid #81d4fa;
+    }
+    
+    #subPage .info_content .container .txt {
+        position: absolute;
+        top:calc(100% - 80px);
+        left:0;
+        background: rgba(0,0,0,0.5);
+        color: #f2f2f2;
+        padding: 20px 15px;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+    }    
+    
+    #subPage .info_content .container .inner:hover .txt {
+        top:calc(100% - 220px);
+    }
+
+    #subPage .info_content .txt strong {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    #subPage .info_content .txt strong::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background:#fff;
+        margin: 15px 0 25px 0;
+    }
+
+    #subPage .info_content figure:nth-child(1) strong {
+        color: #e1f5fe;
+    }
+    #subPage .info_content figure:nth-child(2) strong {
+        color: #b3e5fc;
+    }
+    #subPage .info_content figure:nth-child(3) strong {
+        color: #81d4fa;
+    }
+    #subPage .info_content figure:nth-child(4) strong {
+        color: #4fc3f7;
+    }
+
+    #subPage .info_content figure:nth-child(1) .inner {
+        border-color: #e1f5fe;
+    }
+    #subPage .info_content figure:nth-child(2) .inner {
+        border-color: #b3e5fc;
+    }
+    #subPage .info_content figure:nth-child(3) .inner {
+        border-color: #81d4fa;
+    }
+    #subPage .info_content figure:nth-child(4) .inner {
+        border-color: #4fc3f7;
+    }
+
+    /*------ container ----- */
+
+    #subPage .info_content .danger {
+        width: 1170px;
+        margin: 0 auto;
+        background: #f3f3f3;
+        padding: 30px 20px;
+    }
+
+    #subPage .info_content .danger strong{
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 30px 0;
+    }
+    #subPage .info_content .danger i {
+        margin-right: 10px;
+    }
+
+    #subPage .info_content .danger p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.4em;
+        margin: 0 0 30px 0;
+    }
+
+    #subPage .info_content .danger .list {
+        line-height: 1.6;
+        font-size: 15px;
+    }
+    #subPage .info_content .danger .list li::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: #444;
+        vertical-align: middle;
+        margin:0 10px 0 0;
+        border-radius: 50%;
+    }
+
+
+    /*------ danger ----- */
+
+    
+
+    </style>
+</head>
+<body>
+<div class="Wrap">
+    <div id="top_banner">
+        <div class="case">
+            <div class="container">
+                <h2>저희는 ZARA의 사업 활동이 점점 더 지속 가능할 수 있도록 계속해서 노력하고 있습니다.</h2>
+                <p>2001년에 처음으로 UN 글로벌 협약에 서명하고 첫 번째 행동 강령을 시행한 이후로 ZARA의 사회적 그리고 환경적 목표는 더욱 엄격해졌습니다.</p> 
+            </div>
+        </div>
+        <div class="btn">
+            <i class="xi-arrow-top"></i>
+        </div>        
+    </div>
+<!-- HEADER -->
+
+    <header>
+        zara
+    </header>
+
+<!-- MAIN  -->
+
+    <article id="subPage">
+        <section class="info_content">
+            <h2>ZARA Materials</h2>
+            <p>AT ZARA, WE ARE WORKING TO INTEGRATE SUSTAINABILITY IN ALL OF OUR DAILY DECISION MAKING.</p>
+            <section class="fixed_bg">
+                <strong>" RECYCLED MATERIALS "</strong>
+                <p>WE ONLY USE RECYCLED MATERIALS THAT HAVE BEEN CERTIFIED<br>
+                    BY ORGANISATIONS WHICH MONITOR FROM THE RAW MATERIAL TO THE FINAL PRODUCT.</p>
+                <div id="bgndVideo" class="player"></div>
+            </section>
+            <div class="container">
+                <figure>
+                    <div class="inner">
+                        <img src="../img/img_sub06/prd01.jpg" alt="">
+                            <div class="txt">
+                            <strong>01</strong>
+                            <h3>PLANET</h3>
+                            <p>WE ARE WORKING SO THE WAY IN WHICH WE MANUFACTURE OUR PRODUCTS AND OUR ACTIVITY REDUCES OUR IMPACT ON NATURE.</p>
+                        </div>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="inner">
+                    <img src="../img/img_sub06/prd02.jpg" alt="">
+                        <div class="txt">
+                        <strong>02</strong>
+                        <h3>BIODIVERSITY</h3>
+                        <p>AT ZARA, WE ARE WORKING TOWARDS RESPONSIBLE AND SUSTAINABLE MANAGEMENT OF NATURAL</p>
+                        </div>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="inner">
+                    <img src="../img/img_sub06/prd03.jpg" alt="">
+                        <div class="txt">
+                        <strong>03</strong>
+                        <h3>WATER</h3>
+                        <p>OUR GLOBAL WATER MANAGEMENT STRATEGY PROMOTES PROJECTS WHICH ARE FOCUSED ON ENSURING</p>
+                        </div>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="inner">
+                    <img src="../img/img_sub06/prd04.jpg" alt="">
+                        <div class="txt">
+                        <strong>04</strong>
+                        <h3>EMISSIONS</h3>
+                        <p>AS PART OF OUR PLEDGE FOR REDUCING THE EFFECTS OF CLIMATE CHANGE,<br>
+                             WE HAVE ESTABLISHED THE OBJECTIVE OF 0 NET EMISSIONS BY 2040.</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            <div class="danger">
+                <strong><i class="xi-user-plus-o"></i></strong>
+                <strong>JOIN LIFE MATERIALS</strong>
+                <p>THE SELECTION AND PRODUCTION OF RAW MATERIALS IS A KEY STAGE IN THE LIFE CYCLE OF OUR PRODUCTS.<br>
+                    INTERNATIONAL ORGANISATIONS, AMONG OTHER INSTITUTIONS, TO PROMOTE THE DEVELOPMENT OF MORE SUSTAINABLE MATERIALS BY MEANS OF TEXTILE INNOVATION.</p>
+                <ul class="list">
+                    <li>RECYCLED POLYESTER</li>
+                    <li>WOOL, COTTON AND OTHER RECYCLED</li>
+                    <li>CIRCULAR RECYCLEDD POLYESTER</li>
+                    <li>RECYCLED SYNTHETIC RUBBER</li>
+                    <li>RECYCLED WOOD</li>
+                    <li>BONDED LEATHER FIBRES</li>
+                </ul>
+            </div>
+        </section>
+    </article> 
+
+
+<!-- FOOTER  -->
+    <footer>
+        &copy; aaaa8866
+    </footer>
+</div>  
+</body>
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery.mb.YTPlayer.min.js"></script>
+
+
+<script>
+    $(function(){
+
+        $('#top_banner i').on('click', function(){
+            $('#top_banner .case').slideToggle(200);
+            $(this).toggleClass('on');
+        });
+
+        // $("#bgndVideo").YTPlayer({
+        //     videoURL:'https://youtu.be/5rTy4oouj4c',
+        //     containment:'.fixed_bg',
+        //     autoPlay:true,
+        //     mute:true, 
+        //     startAt:0, 
+        //     opacity:1,
+        //     showControls:false,
+        // });
+
+    });
+</script>
+</html>
