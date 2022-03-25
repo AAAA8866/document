@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기본으로돌아가기8</title>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+    .Wrap {}
+    header, footer {height: 100px; background: #555; color:#fff; text-align: center; line-height: 100px;}
+    /* article {min-height: 500px; letter-spacing: -0,025em;}
+    img {width:100%} */
+    
+    /* top_banner */
+
+    #top_banner {
+        color:#333;
+        position: relative;
+    }
+    #top_banner .case {
+        background: #f2f2f2;
+    }
+    #top_banner .container {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px 15px;
+    }
+    #top_banner .btn{
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: right;
+        width: 1200px;
+        padding: 0 15px;
+        z-index: 999;
+        cursor: pointer;
+    }
+    #top_banner .btn i {
+        padding: 5px;
+        background: #f2f2f2;
+        transition: 0.2s;
+    }
+    #top_banner .btn i.on {
+        transform: rotate(180deg);
+    }
+
+/*------ top_banner ----- */
+
+    #subPage .zigColumn {
+        padding: 100px 0;
+    }
+
+    #subPage .zigColumn .container {
+        display: flex;
+        flex-flow: wrap column;
+        width: 1200px;
+        max-height: 500px;
+        margin: 0 auto;
+    }
+
+    #subPage .zigColumn figure {
+        padding:0 15px;
+        width: 50%;
+    }
+
+    #subPage .zigColumn .txt {
+        padding:30px 15px;
+        width: 50%;
+    }
+
+    #subPage .zigColumn .container .txt strong {
+        display: block;
+        font-size: 17px;
+        color: #666;
+    }
+
+    #subPage .zigColumn .container .txt h3 {
+        font-size: 19px;
+        color: #1273e0;
+        margin: 0 0 20px 0;
+    }
+
+    #subPage .zigColumn .container .txt p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 0 0 20px 0;
+    }
+
+    #subPage .zigColumn .container .txt a {
+        display: inline-block;
+        border: 1px solid #666;
+        padding: 6px 20px;
+    }
+
+    
+   /* ----subPage----- */
+    </style>
+</head>
+
+<body>
+<div class="Wrap">
+
+<div id="top_banner">
+<div class="case">
+    <div class="container">
+        <h2>저희는 ZARA의 사업 활동이 점점 더 지속 가능할 수 있도록 계속해서 노력하고 있습니다.</h2>
+        <p>2001년에 처음으로 UN 글로벌 협약에 서명하고 첫 번째 행동 강령을 시행한 이후로 ZARA의 사회적 그리고 환경적 목표는 더욱 엄격해졌습니다.</p> 
+    </div>
+</div>
+<div class="btn">
+    <i class="xi-arrow-top"></i>
+</div>        
+</div>
+<!-- HEADER -->
+
+<header>
+    zara
+</header>
+
+<!-- MAIN  -->
+
+<article id="subPage">
+    <section class="zigColumn">
+        <div class="container">
+            <figure>
+                <img src="../images/mainvisual01.jpg" alt="">
+            </figure>
+            <div class="txt">
+                <strong>MORE SUSTAINABLE MATERIALS</strong>
+                <h3>JOIN LIFE MATERIALS </h3>
+                <p>THE SELECTION AND PRODUCTION OF RAW MATERIALS PLAY A KEY ROLE IN THE LIFE CYCLE OF OUR PRODUCTS. THE USE OF MORE SUSTAINABLE MATERIALS HELPS US TO REDUCE THEIR IMPACT.</p>
+                <a href="#!">MORE CLICK</a>
+            </div>
+            <div class="txt">
+                <strong>MORE SUSTAINABLE MATERIALS</strong>
+                <h3>JOIN LIFE MATERIALS</h3>
+                <p>THE SELECTION AND PRODUCTION OF RAW MATERIALS PLAY A KEY ROLE IN THE LIFE CYCLE OF OUR PRODUCTS. THE USE OF MORE SUSTAINABLE MATERIALS HELPS US TO REDUCE THEIR IMPACT.</p>
+                <a href="#!">MORE CLICK</a>
+            </div>
+            <figure>
+                <img src="../images/mainvisual01.jpg" alt="">
+            </figure>
+        </div>
+    </section>    
+</article> 
+
+
+<!-- FOOTER  -->
+<footer>
+    &copy; aaaa8866
+</footer>
+
+</div>  
+</body>
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="./js/jquery.mb.YTPlayer.min.js"></script>
+
+
+<script>
+    $(function(){
+
+        $('#top_banner i').on('click', function(){
+            $('#top_banner .case').slideToggle(200);
+            $(this).toggleClass('on');
+        });
+
+        $("#bgndVideo").YTPlayer({
+        videoURL:'https://www.youtube.com/watch?v=qR13PjAwHwY',
+        containment:'.fixed_bg',
+        autoPlay:true,
+         mute:true, 
+         startAt:0, 
+         opacity:1,
+         showControls:false,
+        });
+
+ 
+    })
+
+</script>
+</html>
